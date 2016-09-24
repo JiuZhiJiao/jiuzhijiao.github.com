@@ -1,0 +1,810 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Apple,Swift,Program," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Swift. A modern programming language that is safe, fast, and interactive.Swift is a powerful and intuitive programming language for iOS, OS X, tvOS, and watchOS. Writing Swift code is interactive and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift">
+<meta property="og:url" content="http://yoursite.com/2015/12/25/swift/index.html">
+<meta property="og:site_name" content="JiuZhiJ">
+<meta property="og:description" content="Swift. A modern programming language that is safe, fast, and interactive.Swift is a powerful and intuitive programming language for iOS, OS X, tvOS, and watchOS. Writing Swift code is interactive and">
+<meta property="og:image" content="http://i4.tietuku.com/aca46f44a66711a3.jpg">
+<meta property="og:image" content="http://i4.tietuku.com/270b5221e33cd749.png">
+<meta property="og:image" content="http://i4.tietuku.com/f02153b56e5e2e24.png">
+<meta property="og:updated_time" content="2016-01-07T09:08:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift">
+<meta name="twitter:description" content="Swift. A modern programming language that is safe, fast, and interactive.Swift is a powerful and intuitive programming language for iOS, OS X, tvOS, and watchOS. Writing Swift code is interactive and">
+<meta name="twitter:image" content="http://i4.tietuku.com/aca46f44a66711a3.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333794294247196000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/12/25/swift/"/>
+
+
+  <title> Swift | JiuZhiJ </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">JiuZhiJ</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">You only live once</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Swift
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-25T00:00:00+08:00" content="12-25-2015">
+              12-25-2015
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programmer/" itemprop="url" rel="index">
+                    <span itemprop="name">Programmer</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programmer/Apple/" itemprop="url" rel="index">
+                    <span itemprop="name">Apple</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/25/swift/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/swift/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Swift. A modern programming language that is safe, fast, and interactive.Swift is a powerful and intuitive programming language for iOS, OS X, tvOS, and watchOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and apps run lightning-fast. Swift is ready for your next project — or addition into your current app — because Swift code works side-by-side with Objective-C.<br><img src="http://i4.tietuku.com/aca46f44a66711a3.jpg" alt="Swift"></p>
+<h2 id="Introducing-Swift-2"><a href="#Introducing-Swift-2" class="headerlink" title="Introducing Swift 2"></a>Introducing Swift 2</h2><p>Swift has been refined from the ground up. It generates faster code across the board, both for release and debug builds. The Swift compiler is also faster, even while adding new Fix-it suggestions such as where you can use let instead of var. Comments can include Markdown syntax to add rich text and embedded images that display in Xcode’s Quick Help. A new assistant shows your Swift API in a “header-like” view. And new syntax features combined with improvements to the Cocoa frameworks and Objective-C will make your code more expressive, and even safer.</p>
+<h3 id="Error-handling-model"><a href="#Error-handling-model" class="headerlink" title="Error handling model"></a>Error handling model</h3><p>An advanced error handling model provides clear, expressive syntax for catching and throwing errors. It’s also easy to create your own custom error types so you can describe error cases with clear, meaningful names. The new error model was designed to work seamlessly with <code>NSError</code> and the Cocoa frameworks. Error handling code now looks like:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">loadData</span><span class="params">()</span></span> <span class="keyword">throws</span> &#123; &#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">test</span><span class="params">()</span></span> &#123;</div><div class="line">	<span class="keyword">do</span> &#123;</div><div class="line">		<span class="keyword">try</span> loadData()</div><div class="line">	&#125; <span class="keyword">catch</span> &#123;</div><div class="line">		<span class="built_in">print</span>(error)</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="Syntax-improvements"><a href="#Syntax-improvements" class="headerlink" title="Syntax improvements"></a>Syntax improvements</h3><p>New syntax features let you write more expressive code while improving consistency across the language. The SDKs have employed new Objective-C features such as generics and nullability annotation to make Swift code even cleaner and safer. Here is just a sampling of Swift 2.0 enhancements.</p>
+<ul>
+<li>Powerful control flow with <code>do</code>, <code>guard</code>, <code>defer</code>, and <code>repeat</code></li>
+<li>Keyword naming rules unified for functions and methods</li>
+<li>Protocol extensions and default implementations</li>
+<li>Extended pattern matching to work in if clauses and for loops</li>
+</ul>
+<p>Xcode 7 includes a powerful migrator that will help convert your application and playground code to work with the latest syntax improvements in Swift 2.0.</p>
+<h3 id="Open-Source"><a href="#Open-Source" class="headerlink" title="Open Source"></a>Open Source</h3><p>Swift is developed in the open at <a href="https://swift.org" target="_blank" rel="external">Swift.org</a>, with source code, a bug tracker, mailing lists, and regular development builds available for everyone. The broad community of developers, both inside and outside of Apple, are working together to make Swift even more amazing. Swift already has support for all Apple platforms as well as Linux, with new platforms to come. We can’t wait to see all the places where Swift can make software safer and faster, while also making programming more fun.</p>
+<h3 id="Availability"><a href="#Availability" class="headerlink" title="Availability"></a>Availability</h3><p>You should always use the latest SDK to get access to the latest features, documentation, and API changes, but sometimes your app needs to run on an older OS. Swift 2.0 has built-in availability checking to make it easy to build the best possible app for each target OS version. The compiler will give you an error when using an API too new for your minimum target OS, and a new keyword lets you wrap blocks of code in a conditional version check to run only on specific OS releases.</p>
+<h2 id="Modern"><a href="#Modern" class="headerlink" title="Modern"></a>Modern</h2><p>Swift is the result of the latest research on programming languages, combined with decades of experience building Apple platforms. Named parameters brought forward from Objective-C are expressed in a clean syntax that makes APIs in Swift even easier to read and maintain. Inferred types make code cleaner and less prone to mistakes, while modules eliminate headers and provide namespaces. Memory is managed automatically, and you don’t even need to type semi-colons. All this modern thinking results in a language that is easy and fun to use.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">String</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> banana : <span class="type">String</span> &#123;</div><div class="line">    	<span class="keyword">let</span> shortName = <span class="type">String</span>(characters.<span class="built_in">dropFirst</span>(<span class="number">1</span>))</div><div class="line">    	<span class="keyword">return</span> <span class="string">"<span class="subst">\(<span class="keyword">self</span>)</span> <span class="subst">\(<span class="keyword">self</span>)</span> Bo B<span class="subst">\(shortName)</span> Banana Fana Fo F<span class="subst">\(shortName)</span>"</span></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> bananaName = <span class="string">"Jimmy"</span>.banana</div><div class="line">    <span class="comment">// "Jimmy Jimmy Bo Bimmy Banana Fana Fo Fimmy"</span></div></pre></td></tr></table></figure></p>
+<p>Swift has many other features to make your code more expressive:</p>
+<ul>
+<li>Closures unified with function pointers</li>
+<li>Tuples and multiple return values</li>
+<li>Generics</li>
+<li>Fast and concise iteration over a range or collection</li>
+<li>Structs that support methods, extensions, and protocols</li>
+<li>Functional programming patterns, e.g., map and filter</li>
+<li>Native error handling using <code>try</code> / <code>catch</code> / <code>throw</code></li>
+</ul>
+<h3 id="Interactive-Playgrounds"><a href="#Interactive-Playgrounds" class="headerlink" title="Interactive Playgrounds"></a>Interactive Playgrounds</h3><img src="http://i4.tietuku.com/270b5221e33cd749.png" class="Playground" width="100" height="100">
+<p>Playgrounds make writing Swift code incredibly simple and fun. Type a line of code and the result appears immediately. You can then Quick Look the result from the side of your code, or pin that result directly below. The result view can display graphics, lists of results, or graphs of a value over time. You can open the Timeline Assistant to watch a complex view evolve and animate, great for experimenting with new UI code, or to play an animated SpriteKit scene as you code it. When you’ve perfected your code in the playground, simply move that code into your project.</p>
+<p>And new in Xcode 7, playgrounds can contain comments that use rich text with bold, italic, and bullet lists in addition to embedded images and links. You can even embed resources and supporting Swift source code in the playground to make the experience incredibly powerful and engaging, while the visible code remains simple. Playgrounds let you:</p>
+<ul>
+<li>Share curriculum to teach programming with beautiful text and interactive code.</li>
+<li>Design a new algorithm and watch its results every step of the way.</li>
+<li>Create new tests and verify they work before promoting into your test suite.</li>
+<li>Experiment with new APIs to hone your Swift coding skills.</li>
+<li>Turn your experiments into documentation with example code that runs within the playground.</li>
+</ul>
+<p><strong>Read-Eval-Print-Loop (REPL).</strong> The LLDB debugging console in Xcode includes an interactive version of the Swift language built right in. Use Swift syntax to evaluate and interact with your running app, or write new code to see how it works in a script-like environment. Available from within the Xcode console or in Terminal.</p>
+<h3 id="Designed-for-Safety"><a href="#Designed-for-Safety" class="headerlink" title="Designed for Safety"></a>Designed for Safety</h3><p>Swift eliminates entire classes of unsafe code. Variables are always initialized before use, arrays and integers are checked for overflow, and memory is managed automatically. Syntax is tuned to make it easy to define your intent — for example, simple three-character keywords define a variable ( <code>var</code> ) or constant ( <code>let</code> ).</p>
+<p>Another safety feature is that by default Swift objects can never be <code>nil</code>. In fact, the Swift compiler will stop you from trying to make or use a <code>nil</code> object with a compile-time error. This makes writing code much cleaner and safer, and prevents a huge category of runtime crashes in your apps. However, there are cases where <code>nil</code> is valid and appropriate. For these situations Swift has an innovative feature known as <em>optionals</em>. An optional may contain nil, but Swift syntax forces you to safely deal with it using the <code>?</code> syntax to indicate to the compiler you understand the behavior and will handle it safely.</p>
+<h3 id="Fast-and-Powerful"><a href="#Fast-and-Powerful" class="headerlink" title="Fast and Powerful"></a>Fast and Powerful</h3><p>From its earliest conception, Swift was built to be fast. Using the incredibly high-performance LLVM compiler, Swift code is transformed into optimized native code that gets the most out of modern hardware. The syntax and standard library have also been tuned to make the most obvious way to write your code also perform the best.</p>
+<p>Swift is a successor to both the C and Objective-C languages. It includes low-level primitives such as types, flow control, and operators. It also provides object-oriented features such as classes, protocols, and generics giving Cocoa and Cocoa Touch developers the performance and power they demand.</p>
+<h3 id="Objective-C-Interoperability"><a href="#Objective-C-Interoperability" class="headerlink" title="Objective-C Interoperability"></a>Objective-C Interoperability</h3><p><img src="http://i4.tietuku.com/f02153b56e5e2e24.png" class="Xcode" width="100" height="100">You can create an entirely new application with Swift today, or begin using Swift code to implement new features in your app, or enhance existing ones. Swift code co-exists along side your existing Objective-C files in the same project, with full access to your Objective-C API, making it easy to adopt.</p>
+<p>To get started with Swift, download Xcode and follow the tutorials available on the <a href="https://developer.apple.com/swift/resources/" target="_blank" rel="external">Resources</a> tab.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Apple/" rel="tag">#Apple</a>
+          
+            <a href="/tags/Swift/" rel="tag">#Swift</a>
+          
+            <a href="/tags/Program/" rel="tag">#Program</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/01/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/01/Video-Test/" rel="prev" title="The Video Test">
+                The Video Test <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/25/swift/"
+           data-title="Swift" data-url="http://yoursite.com/2015/12/25/swift/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/about/jiuzhijiao.jpg"
+               alt="JiuZhiJiao" />
+          <p class="site-author-name" itemprop="name">JiuZhiJiao</p>
+          <p class="site-description motion-element" itemprop="description">一条进修计算机科学与技术的大学🐶</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/JiuZhiJiao" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/jiuzhijiao" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/3639628164" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JiuZhiJiao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              传送门
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.google.com/" title="Google" target="_blank">Google</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://stackoverflow.com/" title="Stackoverflow" target="_blank">Stackoverflow</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.hackingwithswift.com/" title="Hackingwithswift" target="_blank">Hackingwithswift</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://developer.apple.com/" title="Apple_Development" target="_blank">Apple_Development</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cocoachina.com/" title="CocoaChina" target="_blank">CocoaChina</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://swift.org/" title="SwiftOrg" target="_blank">SwiftOrg</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.bilibili.com/" title="bilibili" target="_blank">bilibili</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introducing-Swift-2"><span class="nav-number">1.</span> <span class="nav-text">Introducing Swift 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-handling-model"><span class="nav-number">1.1.</span> <span class="nav-text">Error handling model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Syntax-improvements"><span class="nav-number">1.2.</span> <span class="nav-text">Syntax improvements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Open-Source"><span class="nav-number">1.3.</span> <span class="nav-text">Open Source</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Availability"><span class="nav-number">1.4.</span> <span class="nav-text">Availability</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modern"><span class="nav-number">2.</span> <span class="nav-text">Modern</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Interactive-Playgrounds"><span class="nav-number">2.1.</span> <span class="nav-text">Interactive Playgrounds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Designed-for-Safety"><span class="nav-number">2.2.</span> <span class="nav-text">Designed for Safety</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fast-and-Powerful"><span class="nav-number">2.3.</span> <span class="nav-text">Fast and Powerful</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective-C-Interoperability"><span class="nav-number">2.4.</span> <span class="nav-text">Objective-C Interoperability</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JiuZhiJiao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jiuzhijiaogithubio"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

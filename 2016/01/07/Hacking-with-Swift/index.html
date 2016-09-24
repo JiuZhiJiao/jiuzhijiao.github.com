@@ -1,0 +1,951 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Apple,Swift,Program," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="介绍
+如果这是你Swift之旅的开始，你需要先做一个选择：是直接开始做应用程序、还是从理论知识开始学起？开始阅读本章节并做出你的选择。
+
+刚接触Swift的开发者Swift是一个由苹果公司开发的快速、免费、强壮并且灵活的编程语言，你可以通过它来做出任何你想要的iPhone、iPad应用程序。如果你仅仅刚起步，你可能会有些不知所措：应该从哪里开始？什么教程才是最好的？应该做些什么？这些都是怎么工作的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hacking with Swift">
+<meta property="og:url" content="http://yoursite.com/2016/01/07/Hacking-with-Swift/index.html">
+<meta property="og:site_name" content="JiuZhiJ">
+<meta property="og:description" content="介绍
+如果这是你Swift之旅的开始，你需要先做一个选择：是直接开始做应用程序、还是从理论知识开始学起？开始阅读本章节并做出你的选择。
+
+刚接触Swift的开发者Swift是一个由苹果公司开发的快速、免费、强壮并且灵活的编程语言，你可以通过它来做出任何你想要的iPhone、iPad应用程序。如果你仅仅刚起步，你可能会有些不知所措：应该从哪里开始？什么教程才是最好的？应该做些什么？这些都是怎么工作的">
+<meta property="og:image" content="http://yoursite.com/images/hackingwithswift/1-2-1.png">
+<meta property="og:image" content="http://yoursite.com/images/hackingwithswift/1-3-1.png">
+<meta property="og:image" content="http://yoursite.com/images/hackingwithswift/1-3-2.png">
+<meta property="og:image" content="http://yoursite.com/images/hackingwithswift/1-4-1.png">
+<meta property="og:updated_time" content="2016-04-14T12:32:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hacking with Swift">
+<meta name="twitter:description" content="介绍
+如果这是你Swift之旅的开始，你需要先做一个选择：是直接开始做应用程序、还是从理论知识开始学起？开始阅读本章节并做出你的选择。
+
+刚接触Swift的开发者Swift是一个由苹果公司开发的快速、免费、强壮并且灵活的编程语言，你可以通过它来做出任何你想要的iPhone、iPad应用程序。如果你仅仅刚起步，你可能会有些不知所措：应该从哪里开始？什么教程才是最好的？应该做些什么？这些都是怎么工作的">
+<meta name="twitter:image" content="http://yoursite.com/images/hackingwithswift/1-2-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6333794294247196000,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/01/07/Hacking-with-Swift/"/>
+
+
+  <title> Hacking with Swift | JiuZhiJ </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">JiuZhiJ</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">You only live once</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hacking with Swift
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-07T02:27:58+08:00" content="01-07-2016">
+              01-07-2016
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programmer/" itemprop="url" rel="index">
+                    <span itemprop="name">Programmer</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Programmer/Apple/" itemprop="url" rel="index">
+                    <span itemprop="name">Apple</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/07/Hacking-with-Swift/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/Hacking-with-Swift/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
+<p>如果这是你Swift之旅的开始，你需要先做一个选择：是直接开始做应用程序、还是从理论知识开始学起？开始阅读本章节并做出你的选择。</p>
+</blockquote>
+<h2 id="刚接触Swift的开发者"><a href="#刚接触Swift的开发者" class="headerlink" title="刚接触Swift的开发者"></a>刚接触Swift的开发者</h2><p>Swift是一个由苹果公司开发的快速、免费、强壮并且灵活的编程语言，你可以通过它来做出任何你想要的iPhone、iPad应用程序。如果你仅仅刚起步，你可能会有些不知所措：应该从哪里开始？什么教程才是最好的？应该做些什么？这些都是怎么工作的？</p>
+<p>我已经制作了一系列从零开始的Swift教程，来帮助你简历超过20个的应用程序和游戏。你将会学到成为一个优秀的iOS开发者需要的所有核心技术，但是它只交给你“需要知道”的基础，因此你会在不同的项目中学到不同部分的Swift知识。最终你将会完整地学习Swift语言的所有的知识并且学习过程中你将会完成许多应用程序。</p>
+<p>但是并不是所有人都喜欢这种学习方式。相比于利用Swift制造东西，一些人更喜欢先孤立学习关于Swift语言本身的知识。</p>
+<p><strong>我并不介意你会做出怎样的选择，所以我把选项都交给了你</strong></p>
+<p>在下面，如果你点击了“通过例子学习Swift”，你将会直接跳过剩下的介绍直接去建立你的第一个项目，开始学习使用Swift做实实在在的应用程序。</p>
+<p>如果你更喜欢一次性学完Swift语言本身的知识，请点击“学习Swift理论知识”，可以继续阅读剩下的介绍、也可以从下面的章节列表中进行选择性阅读。当你完成了所有章目的阅读后，你仍会进入到做实实在在的应用程序的项目中。</p>
+<p>不必担心，你并不会因为你的选择而错过什么：方法不同但后面的项目都会教同样的内容。我仅仅给你提供选择因为你比我要清楚你的学习方式，所以挑选你喜欢的选择并开始学习吧。</p>
+<ul>
+<li><strong><a href="https://www.hackingwithswift.com/read/1/overview" target="_blank" rel="external">通过例子学习Swift</a></strong> (本链接为原文，中文请从右侧目录选取阅读)</li>
+<li><strong><a href="https://www.hackingwithswift.com/read/0/1/how-to-install-xcode-and-create-a-playground" target="_blank" rel="external">学习Swift理论知识</a></strong> (本链接为原文，中文请从右侧目录选取阅读)</li>
+</ul>
+<p><strong> <em>章节列表</em> </strong>  (以下均为原文，中文请从右侧目录选取)</p>
+<ul>
+<li><a href="https://www.hackingwithswift.com/read/0/1/how-to-install-xcode-and-create-a-playground" target="_blank" rel="external">安装Xcode并建立playground</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/2/variables-and-constants" target="_blank" rel="external">变量和常量</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/3/types-of-data" target="_blank" rel="external">数据类型</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/4/operators" target="_blank" rel="external">运算符</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/5/string-interpolation" target="_blank" rel="external">字符串插值</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/6/arrays" target="_blank" rel="external">数组</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/7/dictionaries" target="_blank" rel="external">字典</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/8/conditional-statements" target="_blank" rel="external">条件语句</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/9/loops" target="_blank" rel="external">循环语句</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/10/switch-case" target="_blank" rel="external">switch语句</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/11/functions" target="_blank" rel="external">函数</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/12/optionals" target="_blank" rel="external">可选类型</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/13/optional-chaining" target="_blank" rel="external">可选链</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/14/enumerations" target="_blank" rel="external">枚举</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/15/structs" target="_blank" rel="external">结构体</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/16/classes" target="_blank" rel="external">类</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/17/properties" target="_blank" rel="external">属性</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/18/static-properties-and-methods" target="_blank" rel="external">静态属性方法</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/19/access-control" target="_blank" rel="external">访问控制</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/20/polymorphism-and-type-casting" target="_blank" rel="external">多态性与类型转换</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/21/closures" target="_blank" rel="external">闭包</a></li>
+<li><a href="https://www.hackingwithswift.com/read/0/22/wrap-up" target="_blank" rel="external">解包</a></li>
+</ul>
+<h3 id="需要帮助？"><a href="#需要帮助？" class="headerlink" title="需要帮助？"></a>需要帮助？</h3><p>我把从读者那里得到的出现频率最高的250个问题的答案都放在了一个地方：<a href="https://www.hackingwithswift.com/example-code" target="_blank" rel="external">Swift2知识库</a>。在那里提供了基础的、高级的问题的答案，以及提供了你可以重复使用的大量的免费代码。如果你遇到了问题，请先尝试现在那里进行搜索。</p>
+<p>如果你仍然存在问题，你可以在发布到<a href="http://www.reddit.com/r/hackingwithswift" target="_blank" rel="external">Hacking with Swift subreddit</a>以快速获取答案。或者你可以在<a href="http://twitter.com/twostraws" target="_blank" rel="external">原作者的Twitter</a>上进行提问。(当然你也可以在文章下面进行评论)</p>
+<h3 id="项目文件"><a href="#项目文件" class="headerlink" title="项目文件"></a>项目文件</h3><p>Hacking with Swift所有的项目文件都在Github上面，你可以预览它们、收藏它们或者进行下载：<a href="https://github.com/twostraws/HackingWithSwift" target="_blank" rel="external">Github仓库</a></p>
+<h3 id="支持我的工作"><a href="#支持我的工作" class="headerlink" title="支持我的工作"></a>支持我的工作</h3><p>如果你想支持我的工作，你可以从<a href="https://gum.co/hws-book-pack" target="_blank" rel="external">Gumroad</a>中购买完整的Hacking with Swift这本书。包含了每一个1级项目的HTML文档以及.mobi格式的电子书。同时“你可以支付你想支付的任意金额”，也就是说，你甚至可以支付0元去进行免费下载，但是能资助我金钱也是十分欢迎的。(同时欢迎使用支付宝，具体账户见<a href="http://jiuzhij.com/about/" target="_blank" rel="external">博主介绍</a>页面)</p>
+<h3 id="关于本书"><a href="#关于本书" class="headerlink" title="关于本书"></a>关于本书</h3><p>《Hacking with Swift》是一本为想要使用Swift来编写iPad和iPhone应用程序的新手而创作的完全免费的教程。项目1到项目30是以iOS8为主的，我同时还有一个<a href="https://www.hackingwithswift.com/ios9-tutorials" target="_blank" rel="external">教程是以iOS9为主的</a>。最重要的是，整本书都是免费的，所以你没有理由不去学习它。</p>
+<p>我的教学方式是跳过大量的理论知识。跳过那些华丽的高级的技术，甚至会用20行简单地易于理解的代码去解释1行神奇的代码。并不去理会大量的代码。也许以后，一旦你完成了所有的学习，你想回头学习下我所经历过的所有的理论。但是我要告诉你：学习理论本身的问题是我们的大脑其实并不对记忆只是为了他的东西感兴趣。</p>
+<p>你看，在这里你将会学习“需要知道”的理论去编程。几乎所有你从我这里学到的知识都会有一个直接、实际地应用。这样的话，我们的大脑就会知道哪些技术是有用的，然后就可以直接开始使用了。</p>
+<p>这本书已经写在我的座右铭上了：“编程是一门艺术。不要花费你所有的时间去削铅笔当你要画画的时候。”我们会做一些“削”的动作，但是更多时间用来“画”–如果这不符合你的学习方式，那么你现在就应该关掉本教程。</p>
+<h3 id="三条黄金定理"><a href="#三条黄金定理" class="headerlink" title="三条黄金定理"></a>三条黄金定理</h3><p>本教程有几点在你开始前需要理解的地方：</p>
+<ol>
+<li>遵循下面：前30个教程从一开始被设计就被定义为要贯彻始终的知识。原因就是教程会一步步地教你理解需要知道的知识通过循序渐进地做项目。</li>
+<li>不要跳过游戏和技术讲解部分：该教程遵循下列顺序：应用程序、游戏、技术讲解、应用程序、游戏…就是说，你开发了一个应用程序，然后你再开发游戏，然后我们专注于特殊的iOS组件让你的应用程序变得更好。应用程序和游戏，当然，都是独立的，你可以尽你所想地去开发它们，但是技术部分往往会被用来准备或者改进你的项目。</li>
+<li>做好玩耍的准备：这门教程并不是被设计用来一站式学习Swift的。它之所以叫做“Hacking with Swift”是因为我们每个项目解决问题，目标就是为了更加接近学完所有的知识–我们运用语言，或过关斩将，或潜心修行，随性地去学习，而不是像计算机课上那样的死板。</li>
+</ol>
+<p>我不能过重复以前的点。我一次一次发现无论是哪一个教程，无论写的多认真、无论读者目标是什么，总会无法满足多样的用户目的。所以这些人会生气，说这个教程是多么的错误，说这个教程是多么的蹩脚，说如果他们有时间去写的话他们会写得更好，等等。</p>
+<p>12年的写作，让我学会了不去理睬极少数人的偏见并继续前进，因为重要的是无论如何教程都是对你是有用的。</p>
+<p>你可能曾经惊讶于很多人的成功方法，读书、上课或者做任何可以做的事情，除了在电脑前坐下并打字。然而这并不是我的成功方法。我认为学习知识最好的办法就是自己去尝试，看看事情是怎样发生的，原理是什么。</p>
+<p>确实，上课可能会巩固你所学的知识，或者能教会你节省时间的技术，但是我见过太多的获得计算机学位的人最终被要求编写一个简单的程序所绊倒。你说你不相信我？那请你尝试用Google搜索下“fizz buzz test”，结果同样会让你吃惊。</p>
+<p>那么，继续前行，并且请一定一定要从中收获快乐–因为如果你不能享受你自己的话，Swift这门编程语言可能不适合你。</p>
+<p>如果你想了解更多，请访问该网站：<a href="https://www.hackingwithswift.com/" target="_blank" rel="external">hackingwithswift.com</a>。</p>
+<p>如果你在这本书上发现了错误，无论是拼写错误还是技术错误，请及时让我知道这样我就可以及时进行更正。联系我的最好方式是Twitter<a href="http://twitter.com/twostraws" target="_blank" rel="external">@twostraws</a>，你也可以使用邮箱<a href="paul@hackingwithswift.com">paul@hackingwithswift.com</a>。</p>
+<h3 id="Xcode，Swift和iOS"><a href="#Xcode，Swift和iOS" class="headerlink" title="Xcode，Swift和iOS"></a>Xcode，Swift和iOS</h3><p>我并不想说得太多，因为我想直接开始敲代码。但是，这里有一些你需要知道的地方：</p>
+<ul>
+<li>你需要从Mac App Store下载最新版本的Xcode。它是免费的，并且在iOS模拟器里它包含了开发iOS应用程序的所有东西。这一系列的项目大多数都会在这个模拟器里进行开发，但是仍需要一部iOS设备因为有些技术在模拟器里并不被支持–像是Touch ID和加速度计。同时你也要有一个苹果开发者账号用来把你的项目发布到设备上。</li>
+<li>Swift是一个相对较新的编程语言，并且正在迅速发展。每一个新版本的Xcode都会或多或少地改变些东西，而且会出现现在可以使用的代码过段时间久不在工作了。在写这篇文章的时候，Swift已经足够成熟了，也就是说每一次的变化都相对较少了。然而，那些修改了Swift工作方式的地方都会被明确地标注出来。</li>
+<li>前30个项目别设计用于iOS8.0及更新版本，适用于大多数的设备。你也可以把它们降级到7.0上如果你想让项目支持更多设备的话，但是这么做并不值得。从项目31开始我们讲步入iOS9，所以你需要使用Xcode 7。</li>
+</ul>
+<p>我很高兴回答Twitter上的问题，如果你遇到了问题，请随时进行联系！</p>
+<blockquote>
+<p>Swift, the Swift logo, Xcode, Instruments, Cocoa Touch, Touch ID, AirDrop, iBeacon, iPhone, iPad, Safari, App Store, Mac and OS X are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+</blockquote>
+<h3 id="奉献"><a href="#奉献" class="headerlink" title="奉献"></a>奉献</h3><blockquote><p>这本书写给我的女儿Charlotte，又叫“Bonk”的。她在我创作的时候给力我很多和拥抱和幸福。</p>
+<footer><strong>版权所有 @twostraws</strong><cite><a href="http://twitter.com/twostraws" target="_blank" rel="external">twitter.com/twostraws</a></cite></footer></blockquote>
+<p><br><br></p>
+<h2 id="安装Xcode并建立playground"><a href="#安装Xcode并建立playground" class="headerlink" title="安装Xcode并建立playground"></a>安装Xcode并建立playground</h2><p>Xcode是苹果为开发者而做的变成软件。你可以免费从Mac AppStore中下载，iPhone和iPad的开发需要它。所以你第一步就应该是<a href="https://itunes.apple.com/us/app/xcode/id497799835?mt=12&amp;at=10l8cn&amp;ct=hws" target="_blank" rel="external">点击这里从Mac AppStore中下载并安装Xcode</a>－它是一个蛮大的软件，所以现在请开始下载并抓紧时间继续阅读。</p>
+<p>在你下载的时候，我可以给你普及一下基础知识：</p>
+<ul>
+<li><strong>iOS</strong>是跑在iPhone和iPad上的操作系统的名字。它负责处理手机上的所有的基本操作，比如打电话、在点触屏幕、运行软件等等。</li>
+<li><strong>Swift</strong>是苹果的现代编程语言，用来写iOS应用程序。它只包含用于编写应用的函数，并不处理用户界面、音频以及网络等。</li>
+<li><strong>Swift 1.2</strong>是Swift第一次重大的升级，调整了语言特性以及改进了别的东西。</li>
+<li><strong>Swift 2.0</strong>是Swift第二次重大的升级，我们这门教程就是用的2.0。</li>
+<li><strong>UIKit</strong>是苹果提供的制作用户界面的工具包，它包含按钮、文本框、导航控制等等，并且你将会通过使用Swift来调用它。</li>
+<li><strong>Cocoa Touch</strong>是iOS的所有框架的总称。它包含了UIKit：制作用户界面、SpriteKit：制作2D游戏、SceneKit：制作3D游戏、MapKit：制作地图、Core Graphics：用于绘图、Core Animation：用于制作动画、iAd：用于放置广告等等。</li>
+<li><strong>NeXTSTEP</strong>是乔布斯领导NeXT公司时创造的一个操作系统。被苹果买下并且乔布斯重回苹果后把NeXTSTEP作为苹果开发平台的核心科技。</li>
+<li><strong>iOS Simulator</strong>是Xcode自带的iPhone、iPad模拟器，它在功能和外观上和几乎完全和实体机一样。它是一个可以让你不用实体机就可以快速测试你的应用程序的工具。</li>
+<li><strong>Playground</strong>是一个所见即所得的Swift测试环境。在那里你不能开发真正的应用程序但是你可以通过它来学习知识。我们会用它来介绍知识点。</li>
+<li><strong>Crash</strong>是当你的代码运行出错了导致程序无法恢复。如果用户在用你的程序时crash了就会闪退，如果在Xcode中运行时crash则会反馈崩溃报告。</li>
+<li><strong>Taylor Swift</strong>和Swift编程没有一点关系。在这里用他的一首歌曲一笑带过吧，毕竟这是题外话。<div class="video-container"><iframe src="//www.youtube.com/embed/nfWlot6h_JM" frameborder="0" allowfullscreen></iframe></div>
+</li>
+</ul>
+<p><strong>Xcode安装好了吗？让我们继续前行吧！</strong></p>
+<h3 id="介绍Swift-Playground"><a href="#介绍Swift-Playground" class="headerlink" title="介绍Swift Playground"></a>介绍Swift Playground</h3><p>当我们运行Xcode时，你会看到如下图的界面。在左边找到“Get started with a playground”，点击它。Xcode会让你进行命名，写“MyPlayground”就好。你应该选择iOS作为该playground的应用平台，否则的话本教程会看起来十分混乱！</p>
+<p>当你点击下一步时你将会被询问是否保存，所以选择桌面并点击创建。<br><img src="/images/hackingwithswift/1-2-1.png" class="Get started with a playground"></p>
+<p>接下来你会看到一个一分为二的窗口，在左边的窗口中你会看到如下代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//: Playground - noun: a place where people can play</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> UIKit</div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">"Hello, playground"</span></div></pre></td></tr></table></figure></p>
+<p>在右边的窗口中，你将会看到<code>Hello,playground</code>。</p>
+<p>这种双窗口的形式是很重要的，它把代码和结果分开了。你可以编辑左侧窗口的代码然后运行。运行结果会显示在右侧窗口中，同时也说明你的代码已经运行完毕。现在，它就告诉我们已经成功地设置了<code>Hello,playground</code>这个值。</p>
+<p>你可能会注意到第一行代码以两条斜线开始<code>//</code>。当Swift看到<code>//</code>时，它将忽略这一整行代码。所以通常用来注释：表明你的这段代码是用来干嘛的，用来帮助你以后回想时能记得起它的功能。</p>
+<p>你每键入新的代码时，playground会自动刷新结果。比如，如果你写两次<code>str</code>，你就会在右面看到两次<code>Hello,playground</code>。</p>
+<p>Playground是一个非常好的所见即所得的工具。接下来的几个小时里你会发现它是十分强大的。让我们开始写Swift代码吧！</p>
+<p><br><br></p>
+<h2 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a>变量和常量</h2><p>每一个好用的程序都需要存储数据，在Swift中我们有两个存储数据的东西：变量和常量。变量是当你想改变值的时候可以进行更改，常量是一旦你声明里它就再也无法对它的值进行修改了。因此，变量存储一个可改变的值，常量则存储一个不可变的值。</p>
+<p>这两个选项看起来毫无意义，毕竟可以创造一个变量然后再也不去改变它的值–我们为什么还需要常量呢？这正是很多程序员写不出好程序、犯错的原因。一个分离开的变量和常量的好处就是Xcode在我们犯错误的时候会告诉我们。就像“把日期声明为常量，因为日期不会变”，在10行代码后试图改变它的值，Xcode这时会拒绝我们建立应用程序。</p>
+<p>同时常量可以让Xcode决定怎样建立你的程序。如果Xcode知道一个值是永远不会改变的，它将会对程序进行优化，这样你的代码会运行的更快。</p>
+<p>在Swift中，你可以这样定义一个变量、使用关键字<code>var</code>：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure><br>让我们在所见即所得的playground中运行这段代码。删除除了UIKit外的所有代码(删除的代码是以后才会用到的)，并且增加这个变量，就像下图所示：<br><img src="/images/hackingwithswift/1-3-1.png" class="设置变量"><br>因为是一个常量，所以你可以随意地改变它的值，但是你不必每一次都是用关键字<code>var</code>–关键字仅仅在你声明这个变量的时候才使用。现在试试这行代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div><div class="line">name = <span class="string">"Romeo"</span></div></pre></td></tr></table></figure><br>第一行代码声明了一个<code>name</code>变量并且给它赋了初始值，第二行则更新了<code>name</code>变量的值，现在它的值是“Romeo”。你可以看到两个值都在playground中进行了打印。</p>
+<p>那么，如果我们用常量代替变量呢？常量用<code>let</code>来定义，所以你只需要把你写的第一行代码中的<code>var name</code>用<code>let name</code>替代就好了，代码如下：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> UIKit</div><div class="line"><span class="keyword">let</span> name = <span class="string">"Tim McGraw"</span></div><div class="line">name = <span class="string">"Romeo"</span></div></pre></td></tr></table></figure><br>但是现在Xcode在第三行报错了，出现了一个警告标志，并且在<code>name</code>下面出现了波浪线。当你点击红色的警告标志时，Xcode会告诉你错误信息：“Cannot assign to ‘let’ value ‘name’”–换句话说，Xcode是在说“你在尝试去改变常量的值，但是这是不被允许的”。<br><img src="/images/hackingwithswift/1-3-2.png" class="let不能赋值"><br>因此，对Xcode、对你自己来说，常量是一个很好值不变的方式，因为一旦你改变了常量的值Xcode将拒绝运行你的程序。当需要一个不会改变的值的时候Swift开发者应该有很强的自觉性去使用常量因为这会增加代码的可读性。实际上，在最新版本的Swift中，当你定义的变量的值没有被改变时Xcode会告诉你应该用常量来代替你所使用的变量！</p>
+<p><strong>重要的点：</strong>在你的代码中，常量和变量的名字必须是唯一的。如果你使用了两个相同的名字去定义不同的事物时，Xcode会报错的，就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Time McGraw"</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">"Romeo"</span></div></pre></td></tr></table></figure><br>如果playground在你的代码中发现了错误，它将会用红色的标记标记出来、或者拒绝运行你的程序。当它拒绝运行你的程序的时候，在结果窗口你会看到的是灰色的结果而不是黑色的。</p>
+<p><br><br></p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>有很多类型的数据，Swift对于每种数据类型都有独特的处理方法。你已经用过了一种很重要的数据类型，就是你分配了一个文本给一个变量的时候，但在Swift中这种数据类型叫做<code>String</code>–由字符组成的字符串。</p>
+<p>字符串可以很长(例如100万字以上)，也可以很短(例如10个字母)，也可以为空(例如没有字母)，这都不是问题：对Swift来说这些都一样，处理它们的工作方式都一样。Swift知道<code>name</code>应该是一个字符串类型因为你是用“Tim McGraw”这个字符串来初始化了它。如果你想重写你的代码Xcode将停止工作：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name</div><div class="line">name = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure><br>这次Xcode并不会给你直观的错误：“Type annotation missing in pattern”。它的意思是：“因为你没有给我关于<code>name</code>足够的信息所以我不能确定它的数据类型”。</p>
+<p>对于这种情况，你有两个方法来解决它：一个是在声明你的变量的时候就对它进行初始化，另一个是在声明变量时使用类型宣告(类型宣告是告诉Swift这个变量以后会用什么数据类型)，第二种方式并不需要你在声明时就马上赋值给变量。</p>
+<p>你已经看到过第一种方法了，接下来让我们看看第二种方法：类型宣告。我们知道    <code>name</code>变量将会是字符串类型，所以我们可以用冒号加<code>String</code>的方式来告诉Swift，就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name: <span class="type">String</span></div><div class="line">name = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure><br>现在不会再提示错误了，因为Swift已经知道<code>name</code>的数据类型了。</p>
+<p><strong>注释：</strong>一些人喜欢在冒号前面和后面都加上空格，就像<code>var name : String</code>这样，这么做是错误的并且你也应该极力避免这种错误。<br>Swift总是想知道每一个常量或变量的数据类型。并且你永远都不能逃避这个问题，同时这也是件好事因为这么做带来了类型安全–如果你已经说了“它是字符串类型”但是之后你却尝试放一个兔子进去的话😂，Swift将会拒绝运行。</p>
+<p>接下来我们介绍另一个重要的数据结构，<strong>Int</strong>，“integer(整数)”的缩写。整数是指3、30、300或者-16777216这样的数字，下面是代码展示：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name: <span class="type">String</span></div><div class="line">name = <span class="string">"Time McGraw"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> age: <span class="type">Int</span></div><div class="line">age = <span class="number">25</span></div></pre></td></tr></table></figure><br>上述代码定义了两个变量，一个字符串类型的一个整数类型的。注意<code>String</code>和<code>Int</code>的首字母都是大写的而<code>name</code>和<code>age</code>则不是–这是Swift标准编码的约定。代码约定对Swift来说不算什么(毕竟你可以写任何你喜欢的名字)但是对开发者来说却很重要。所以数据类型以大写字母开头儿变量和常量则不是。</p>
+<p>现在我们有两个不同数据类型的变量了，你可以用实际行动来看看类型安全是怎么一回事了。尝试写下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">name = <span class="number">25</span></div><div class="line">age = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure><br>在上述代码中你在尝试把整数放到字符串类型的变量里、把字符串放到整数类型的变量里，幸好Xcode会有错误提示。也许你认为这是做作，但实际上这很有帮助：你定义里一个特定的数据类型的变量，在你工作中Xcode就会强制执行。</p>
+<p><strong>在你继续之前，记得把这两行错误代码删除掉，否则的话你的playground将不会继续工作下去。</strong></p>
+<h3 id="Float-和-Double-数据类型"><a href="#Float-和-Double-数据类型" class="headerlink" title="Float 和 Double 数据类型"></a>Float 和 Double 数据类型</h3><p>让我们再来看两个数据类型：<code>Float</code>和<code>Double</code>。这两种类型是用来存储小数的，例如3.1、4.141、3.1415926和-16777216.5。之所以会有两种类型是因为它们的精度不一样，但是Apple官方建议大多数情况下使用<code>Double</code>，因为它的精度更高。</p>
+<p>接下来再playground尝试下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> latitude: <span class="type">Double</span></div><div class="line">latitude = <span class="number">36.166667</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> longitude: <span class="type">Float</span></div><div class="line">longitude = -<span class="number">86.783333</span></div></pre></td></tr></table></figure><br>你可以在右边看到这两个数字，但是仔细观察后你回发现有点小区别的。我们说<code>longitude</code>应该等于-86.783333    ，但是再结果窗口中你看到的-86.7833–最后一个3不见了。现在你可能会问“那么0.000003呢？”这就有力地证明了我所说的精度的问题。</p>
+<p>因为playground后随着你的键入而改变，所以接下来我们来看看<code>Float</code>和<code>Double</code>的区别。把代码改成下面这样：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> longitude: <span class="type">Float</span></div><div class="line">longitude = -<span class="number">86.783333</span></div><div class="line">longitude = -<span class="number">186.783333</span></div><div class="line">longitude = -<span class="number">1286.783333</span></div><div class="line">longitude = -<span class="number">12386.783333</span></div><div class="line">longitude = -<span class="number">123486.783333</span></div><div class="line">longitude = -<span class="number">1234586.783333</span></div></pre></td></tr></table></figure></p>
+<p>上述代码中的数字逐层的在小数点前面增加数字，但是小数点后面的位数不变。但是当你看结果窗口的时候你会发现当你增加小数点前的位数时Swift会减少小数点后面的位数。这是因为已经没有足够的空间去存储你的数字，所以1,000,000已经是一个很大的数字而0.000003是一个很小的数字了。<br><img src="/images/hackingwithswift/1-4-1.png" class="float结果显示固定位数"><br>现在把<code>Float</code>类型改为<code>Double</code>类型，你将会看到每一次Swift都会会原模原样地输出数字：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> longitude: <span class="type">Double</span></div></pre></td></tr></table></figure></p>
+<p>这是因为<code>Double</code>拥有<code>Float</code>类型的两倍的精度所以前者并不会去裁剪你的数字。当然Double也是有位数限制的–如果你真的想尝试下很大的数字的话就像123456789.123456789你会在输出窗口看到123456789.1234567。</p>
+<h3 id="Boolean-数据类型"><a href="#Boolean-数据类型" class="headerlink" title="Boolean 数据类型"></a>Boolean 数据类型</h3><p>Swift内建了一种来判断对错的数据类型，叫作<code>Bool</code>(布尔)，Boolean的简称。布尔类型并不会犹豫不决，它只有两种情况：对或错。就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stayOutTooLate: <span class="type">Bool</span></div><div class="line">stayOutTooLate = <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> nothingInBrain: <span class="type">Bool</span></div><div class="line">nothingInBrain = <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> missABeat: <span class="type">Bool</span></div><div class="line">missABeat = <span class="literal">false</span></div></pre></td></tr></table></figure></p>
+<h3 id="合理地使用类型宣告"><a href="#合理地使用类型宣告" class="headerlink" title="合理地使用类型宣告"></a>合理地使用类型宣告</h3><p>就像刚刚所学一样，Swift有两种方法去定义数据类型：声明变量时就对变量进行初始化赋值、或使用类型宣告。如果可以选择的话，第一种方法总是更好的因为它更加简洁。就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure></p>
+<p>上述代码是下述代码的简写：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name: <span class="type">String</span></div><div class="line">name = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure></p>
+<p>它适用于所有数据类型，就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">25</span></div><div class="line"><span class="keyword">var</span> longitude = -<span class="number">86.783333</span></div><div class="line"><span class="keyword">var</span> nothingInBrain = <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p>能够自动识别出数据类型的这项技术叫作<em>类型推导</em>，因为Swift可以自动推导出你所定义的变量所使用的数据类型。当这个变量的初始值是-86.783333，Swift总是会自动推导它为<code>Double</code>类型而非<code>Float</code>类型。</p>
+<p>最后，你也可以同时使用这两种方法，就像下面这行代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name: <span class="type">String</span> = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure></p>
+<p><br><br></p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>运算符是你第一次上数学课的时候就有学的东西：+加、-减、*乘、/除、=赋值，等等。它们在Swift中也依然存在。</p>
+<p>让我们来些简单的，请在playground中写下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">10</span></div><div class="line">a = a + <span class="number">1</span></div><div class="line">a = a - <span class="number">1</span></div><div class="line">a = a * a</div></pre></td></tr></table></figure></p>
+<p>在结果窗口中你可以看到10，11，10和100，接下来试试下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> b = <span class="number">10</span></div><div class="line">b += <span class="number">10</span></div><div class="line">b -= <span class="number">10</span></div></pre></td></tr></table></figure></p>
+<p>+=的意思是“先相加再赋值”。在上述代码中“先取出来<code>b</code>的值，然后在加上10，再把结果赋值给<code>b</code>”。同理，-=和它一样只是先相减。因此在结果窗口中会显示10，20，10。</p>
+<p>如果你想对一个数进行加1或者减1的操作，我们有<code>++</code>和<code>--</code>这两个特殊的操作符，就像下面的代码所展示的那样：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> b = <span class="number">10</span></div><div class="line">++b</div><div class="line">--b</div></pre></td></tr></table></figure></p>
+<p>第二行代码有两个+第三行代码有两个-。结果窗口中会显示10，11，10。</p>
+<p><strong>注意：</strong><code>++</code>和<code>--</code>也可以放到变量名的后面就像<code>b++</code>和<code>b--</code>。但是两种用法有细微的不同，我建议你使用<code>++b</code>和<code>--b</code>。</p>
+<p>在这些运算符中有些运算符是可以作用到其他数据类型上的。例如你可以对两个double类型的数据进行相加：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1.1</span></div><div class="line"><span class="keyword">var</span> b = <span class="number">2.2</span></div><div class="line"><span class="keyword">var</span> <span class="built_in">c</span> = a + b</div></pre></td></tr></table></figure></p>
+<p><strong>注释：</strong>你应该在每一行(而不是在同一行)分别声明<code>a</code>和<code>b</code>，否则Xcode将会认为你只声明来一个变量而不是两个。</p>
+<p>当运算符作用于字符串类型时，+将会把两个字符串合并。就像下面的代码所展示的那样：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name1 = <span class="string">"Tim McGraw"</span></div><div class="line"><span class="keyword">var</span> name2 = <span class="string">"Romeo"</span></div><div class="line"><span class="keyword">var</span> both = name1 + <span class="string">"and"</span> + name2</div></pre></td></tr></table></figure></p>
+<p>在结果窗口将会显示“Tim McGraw and Romeo”。</p>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><p>Swift也提供一系列的比较两个值的运算符。例如：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1.1</span></div><div class="line"><span class="keyword">var</span> b = <span class="number">2.2</span></div><div class="line"><span class="keyword">var</span> <span class="built_in">c</span> = a + b</div><div class="line"></div><div class="line"><span class="built_in">c</span> &gt; <span class="number">3</span></div><div class="line"><span class="built_in">c</span> &gt;= <span class="number">3</span></div><div class="line"><span class="built_in">c</span> &gt; <span class="number">4</span></div><div class="line"><span class="built_in">c</span> &lt; <span class="number">4</span></div></pre></td></tr></table></figure></p>
+<p>上面分别是&gt;大于、&gt;=大于等于、&lt;小于。在结果窗口会看到true、false、true–它们都是布尔类型，因为它们的比较结果只能是true或false。</p>
+<p>如果你想比较两个变量是否相等，你不能使用=因为它已经有定义了：用来给某个变量赋值。所以，Swift提供了==运算符用来判断是否相等。看下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div><div class="line">name == <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure></p>
+<p>在结果窗口会显示“true”。同时Swift是对字母大小写敏感的编程语言，就是说在Swift中“Tim McGraw”、“TIM MCGRAW”、“TiM mCgRaW”<br>是不一样的。如果你用了==来比较两个字符串，你应该确保它们的大小写是一样的。</p>
+<p>还有一个我想介绍给你的运算符，叫作“非”运算符：!，是的，就是一个感叹号。它用来使你的变量取相反值。就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> stayOutTooLate = <span class="literal">true</span></div><div class="line">stayOutTooLate</div><div class="line">!stayOutTooLate</div></pre></td></tr></table></figure></p>
+<p>结果窗口会输出true、true、false–最后之所以是false是因为它取的是true的相反值。</p>
+<p>你也可以使用!=来表示“不等”。就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div><div class="line">name == <span class="string">"Tim McGraw"</span></div><div class="line">name != <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure></p>
+<p><br><br></p>
+<h2 id="字符串插值"><a href="#字符串插值" class="headerlink" title="字符串插值"></a>字符串插值</h2><p>它是用来做一件非常简单的事：在变量和常量中插入一个字符串。</p>
+<p>清除以前的代码并写下下面这行代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div></pre></td></tr></table></figure></p>
+<p>如果我们想给用户发送一条包含它们名字的信息，字符串插值会让这变得很容易：你仅仅需要一个反斜杠、你的代码以及在代码两侧加上圆括号，就像下面这样：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div><div class="line"><span class="string">"Your name is <span class="subst">\(name)</span>"</span></div></pre></td></tr></table></figure></p>
+<p>在结果窗口中将显示“Your name is Tim McGraw”这一个字符串。</p>
+<p>我们也可以使用+运算符：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div><div class="line"><span class="string">"Your name is "</span> + name</div></pre></td></tr></table></figure></p>
+<p>不过第二种方法的效率并不高，尤其是在你需要多次插值的时候。另外，第一种方法中，Swift还会自动把不同的数据类型转化为字符串类型然后进行插值。就像下面的这段代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Tim McGraw"</span></div><div class="line"><span class="keyword">var</span> age = <span class="number">25</span></div><div class="line"><span class="keyword">var</span> latitude = <span class="number">36.166667</span></div><div class="line"></div><div class="line"><span class="string">"Your name is <span class="subst">\(name)</span>, your age is <span class="subst">\(age)</span>, and your latitude is <span class="subst">\(latitude)</span>"</span></div></pre></td></tr></table></figure></p>
+<p>在这种时候使用+运算符就很困难，因为Swift不允许你对整数、double类型和字符串类型进行相加。</p>
+<p>这是你的结果窗口可能不能全部显示结果，所以你可以调整结果窗口的大小或者点击结果窗口中的+号来解决这个问题。</p>
+<p>另一个字符串插值的好处是任何在<code>\(</code>和<code>)</code>之间的表达式都是独立的。就像下面的代码中，你可以同时使用运算符进行一些数学运算：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">25</span></div><div class="line"><span class="string">"You are <span class="subst">\(age)</span> years old. In another <span class="subst">\(age)</span> years you will be <span class="subst">\(age * <span class="number">2</span>)</span>."</span></div></pre></td></tr></table></figure></p>
+<p><br><br></p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组可以把多个数值聚合在一起，然后通过它们的位置来使用它们。Swift使用类型推断来指出数组的数据类型，就像下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oddNumbers = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>]</div><div class="line"><span class="keyword">var</span> songs = [<span class="string">"Shake it Off"</span>, <span class="string">"You Belong with Me"</span>, <span class="string">"Back to December"</span>]</div></pre></td></tr></table></figure></p>
+<p>可以看出，Swift中数组以方括号开始以方括号结束，并且项目与项目之间用逗号隔开。</p>
+<p>当从数组中读取数值时，有一点需要注意的：Swift是从0开始编号的。这就是说第一个项目的位置是0，第二个是1，第三个是2…。接着在playground中尝试下面的代码：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs = [<span class="string">"Shake it Off"</span>, <span class="string">"You Belong with Me"</span>, <span class="string">"Back to December"</span>]</div><div class="line">songs[<span class="number">0</span>]</div><div class="line">songs[<span class="number">1</span>]</div><div class="line">songs[<span class="number">2</span>]</div></pre></td></tr></table></figure></p>
+<p>在结果窗口中会依次显示“Shake it Off”、“You Belong with Me”、“Back to December”。</p>
+<p>项目的位置叫作下标，只要你提供了下标你就可以读取数组中的任意项目。但是你需要注意：我们的数组总共有三个项目，它们的下标分别是0，1，2/如果你尝试读取<code>songs[3]</code>的话playground将会停止工作–如果在应用程序中这么做你的程序将会崩溃！</p>
+<p>因为你用三个字符串创造了这个数组，所以Swift把数组判定为了字符串类型。你可以使用特殊命令来验证任何变量的数据类型，下面是命令：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs = [<span class="string">"Shake it Off"</span>, <span class="string">"You Belong with Me"</span>, <span class="string">"Back to December"</span>]</div><div class="line">songs.<span class="keyword">dynamicType</span></div></pre></td></tr></table></figure></p>
+<p>在结果窗口会显示<code>Array&lt;String&gt;.Type</code>，从而可以知道Swift认为<code>songs</code>是字符串类型的数组。</p>
+<p>接下来说下你可能会犯的错误，例如不小心在数组后面加上了数字。现在重新试下刚才的命令并看显示结果：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs = [<span class="string">"Shake it Off"</span>, <span class="string">"You Belong with Me"</span>, <span class="string">"Back to December"</span>, <span class="number">3</span>]</div><div class="line">songs.<span class="keyword">dynamicType</span></div></pre></td></tr></table></figure></p>
+<p>这次你会看到的结果是：<code>Array&lt;NSObject&gt;.Type</code>。如果报错说：“Type of expression is ambiguous”那你可能是不小心删除了<code>import UIKit</code>这行代码。还记得你在下载Xcode的时候我普及的基础知识吗：乔布斯原来曾经管理过一个叫做NeXT的公司，一个操作系统叫做NeXTSTEP的公司。被苹果买下并且把NeXTSTEP作为苹果开发平台的核心科技。</p>
+<p>接下来就说明：现在数组中有字符串有数字，Swift在后台就把字符串类型转化为了<code>NSObject</code>类型–“一个来自NeXTSTEP的东西”。对iOS来说就是“任意数据类型”，因为NeXT已经很深层次地嵌入到了苹果的开发平台中了。</p>
+<p>类型安全十分重要，虽然Swift尽力去让我们的数组可以包含任何的数据类型，但是总会出现些意外。还好我已经介绍了类型宣告来适应你的数组的数据类型。当你需要一个特定数据类型的数组是，你需要在数组名后写上用方括号包裹的数据类型，就像下面：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs: [<span class="type">String</span>] = [<span class="string">"Shake it Off"</span>, <span class="string">"You Belong with Me"</span>, <span class="string">"Back to December"</span>, <span class="number">3</span>]</div></pre></td></tr></table></figure></p>
+<p>现在我们告诉Swift我们的数组只存储字符串类型的数据，所以Xcode会拒绝运行你的代码因为数组最后有3这个数字。</p>
+<h3 id="声明数组"><a href="#声明数组" class="headerlink" title="声明数组"></a>声明数组</h3><p>如果你用上面的语法创造数组，Swift会声明数组并用你所输入的数值填充数组。如果你想先声明稍后再用值填充的话–这种语法将不会工作：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs: [<span class="type">String</span>]</div><div class="line">songs[<span class="number">0</span>] = <span class="string">"Shake it Off"</span></div></pre></td></tr></table></figure></p>
+<p>虽然原因看起来是很必要的，但是更深层次地是我担心你坚持这样写。简单的说，<code>var songs: [String]</code>告诉Swift“<code>songs</code>变量会是一个字符串数组”，但是<em>实际上并没有创造数组出来</em>。系统没有分配RAM出来，Swift并没有做任何实际动作去创造数组。这段代码仅仅说明了它是一个数组，一个字符串类型的数组。</p>
+<p>接下来说几种正确的表达方式：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs: [<span class="type">String</span>] = []</div></pre></td></tr></table></figure></p>
+<p>上面用来类型宣告去创造一个字符串类型数组，并且分配给了它一个空的数组(<code>[]</code>部分的作用)。</p>
+<p>你也可以用下面这种方法：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs = [<span class="type">String</span>]()</div></pre></td></tr></table></figure></p>
+<p>同上一种方法一样：<code>()</code>告诉Swift我们想要创造一个数组，并且对<code>songs</code>进行类型推导。这个方法就只有一对括号的代码，所以不用惊奇为什么大都数程序猿更喜欢它！</p>
+<h3 id="数组操作符"><a href="#数组操作符" class="headerlink" title="数组操作符"></a>数组操作符</h3><p>你可以对数组进行些操作符。比如，你可以用+把两个数组拼接起来：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> songs = [<span class="string">"Shake it Off"</span>, <span class="string">"You Belong with Me"</span>, <span class="string">"Love Story"</span>]</div><div class="line"><span class="keyword">var</span> songs2 = [<span class="string">"Today was a Fairytale"</span>, <span class="string">"White Horse"</span>, <span class="string">"Fifteen"</span>]</div><div class="line"><span class="keyword">var</span> both = songs + songs2</div></pre></td></tr></table></figure></p>
+<p>你也可以使用+=来实现：<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">both += [<span class="string">"Everything has Changed"</span>]</div></pre></td></tr></table></figure></p>
+<p><br><br></p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Apple/" rel="tag">#Apple</a>
+          
+            <a href="/tags/Swift/" rel="tag">#Swift</a>
+          
+            <a href="/tags/Program/" rel="tag">#Program</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/01/Video-Test/" rel="next" title="The Video Test">
+                <i class="fa fa-chevron-left"></i> The Video Test
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/07/Hacking-with-Swift/"
+           data-title="Hacking with Swift" data-url="http://yoursite.com/2016/01/07/Hacking-with-Swift/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/about/jiuzhijiao.jpg"
+               alt="JiuZhiJiao" />
+          <p class="site-author-name" itemprop="name">JiuZhiJiao</p>
+          <p class="site-description motion-element" itemprop="description">一条进修计算机科学与技术的大学🐶</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/JiuZhiJiao" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.facebook.com/jiuzhijiao" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/3639628164" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JiuZhiJiao" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              传送门
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.google.com/" title="Google" target="_blank">Google</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://stackoverflow.com/" title="Stackoverflow" target="_blank">Stackoverflow</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.hackingwithswift.com/" title="Hackingwithswift" target="_blank">Hackingwithswift</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://developer.apple.com/" title="Apple_Development" target="_blank">Apple_Development</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cocoachina.com/" title="CocoaChina" target="_blank">CocoaChina</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://swift.org/" title="SwiftOrg" target="_blank">SwiftOrg</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.bilibili.com/" title="bilibili" target="_blank">bilibili</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刚接触Swift的开发者"><span class="nav-number">1.1.</span> <span class="nav-text">刚接触Swift的开发者</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要帮助？"><span class="nav-number">1.1.1.</span> <span class="nav-text">需要帮助？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目文件"><span class="nav-number">1.1.2.</span> <span class="nav-text">项目文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支持我的工作"><span class="nav-number">1.1.3.</span> <span class="nav-text">支持我的工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于本书"><span class="nav-number">1.1.4.</span> <span class="nav-text">关于本书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三条黄金定理"><span class="nav-number">1.1.5.</span> <span class="nav-text">三条黄金定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Xcode，Swift和iOS"><span class="nav-number">1.1.6.</span> <span class="nav-text">Xcode，Swift和iOS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#奉献"><span class="nav-number">1.1.7.</span> <span class="nav-text">奉献</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Xcode并建立playground"><span class="nav-number">1.2.</span> <span class="nav-text">安装Xcode并建立playground</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍Swift-Playground"><span class="nav-number">1.2.1.</span> <span class="nav-text">介绍Swift Playground</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量和常量"><span class="nav-number">1.3.</span> <span class="nav-text">变量和常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">1.4.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Float-和-Double-数据类型"><span class="nav-number">1.4.1.</span> <span class="nav-text">Float 和 Double 数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boolean-数据类型"><span class="nav-number">1.4.2.</span> <span class="nav-text">Boolean 数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合理地使用类型宣告"><span class="nav-number">1.4.3.</span> <span class="nav-text">合理地使用类型宣告</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#比较运算符"><span class="nav-number">1.5.1.</span> <span class="nav-text">比较运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串插值"><span class="nav-number">1.6.</span> <span class="nav-text">字符串插值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.7.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明数组"><span class="nav-number">1.7.1.</span> <span class="nav-text">声明数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作符"><span class="nav-number">1.7.2.</span> <span class="nav-text">数组操作符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典"><span class="nav-number">1.8.</span> <span class="nav-text">字典</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JiuZhiJiao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"jiuzhijiaogithubio"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
